@@ -30,7 +30,7 @@ public class Edit extends HttpServlet {
        String per=" ";
        try{
            Class.forName("com.mysql.cj.jdbc.Driver");
-           Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Connect","root","Dev_123goyal");
+           Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Connect","root","root");
            Statement smt=cn.createStatement();
            
            ResultSet rs =smt.executeQuery("select * from student where roll ="+roll);
