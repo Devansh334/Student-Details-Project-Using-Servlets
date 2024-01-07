@@ -28,7 +28,7 @@ public class Update extends HttpServlet {
         
         try  {
            Class.forName("com.mysql.cj.jdbc.Driver");
-           Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Connect","root","Dev_123goyal");
+           Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Connect","root","root");
            Statement smt = cn.createStatement();
            
            int i= smt.executeUpdate("update student set name='"+name+"' ,per='"+per+"' where roll = '"+roll+"'");
