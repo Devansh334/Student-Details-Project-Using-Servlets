@@ -23,7 +23,7 @@ public class Serv extends HttpServlet {
             String roll=request.getParameter("roll");
             String per = request.getParameter("per");
             
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Connect","root","Dev_123goyal");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Connect","root","root");
             Statement st =cn.createStatement();
             int i= st.executeUpdate("Insert into student values('"+roll+"','"+name+"','"+per+"')");
             if(i>0){
